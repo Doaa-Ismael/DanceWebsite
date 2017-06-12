@@ -1,0 +1,349 @@
+@font-face {
+	font-family: 'PTN57F';
+	src : url(../fonts/PTN57F.ttf);
+}
+@font-face {
+	font-family: 'Arapey';
+	src : url(../fonts/Arapey-Regular.ttf);
+}
+* {
+	box-sizing: border-box;
+	transition: 0.4s all ease-in-out; 
+
+}
+body {
+	margin: 0;
+	/*perspective: 1200px;*/
+	height: 1200px
+}
+ul {
+	list-style-type: none;
+}
+.slider ul {
+	
+	margin: 0;
+	padding: 0
+}
+.clear 
+{
+	clear: both;
+}
+/************************ header *********************/
+header {
+	/*height: 50px; */
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.65);
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+}
+header div {
+	display: inline-block;
+    float: left;
+    font-family: 'Arapey', 'PTN57F', 'sans';
+    margin: 20px 0px 10px 60px;
+    font-size: 35px;
+    color: #fff;
+
+}
+header nav ul {
+	float: right;
+	margin : 10px 110px 5px 0;
+}
+header nav ul li {
+	float: left;
+	margin-left: 8px;
+	cursor: pointer;
+	padding: 15px 15px
+}
+header nav ul li a {
+
+	text-decoration: none;
+	font-size: 16px;
+	color: #fff;
+	font-family: 'PTN57F','Sans';
+	letter-spacing: 0.6px;
+}
+header nav ul li:hover{
+	background-color: #168eea;
+}
+/*
+header nav ul li:hover a{
+
+	color: #168eea;
+	
+}*/
+/************************ slider *********************/
+.slider {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+/************************ about *********************/
+.about {
+	/*position: relative; */
+    margin: 0;
+   /* min-height: 600px;*/
+   height: 600px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+    box-shadow : 0px 3px 10px rgba(0, 0, 0, 0.35);
+
+}
+.about .content{
+	float: left;
+	display: inline-block;
+	width: 50%;
+	padding: 18px 50px;
+	font-family: 'PTN57F','Sans';
+} 
+.about .content p{
+	letter-spacing: 1.2px;
+	color: #777;
+}
+.about .image {
+	width: 50%;
+	float: right;
+	position: relative;
+	cursor: pointer;
+	height: 100%;
+	display: inline-block;
+	perspective: 1200px;
+	transition: 0.6s all ease-out ;
+}
+.about .image:hover .more  {
+	transform: translate3d(0px, 0px, 0px); 
+	-webkit-transform: translate3d(0px, 0px, 0px); 
+	z-index: 5;
+}
+.about .image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+.about .image .more {
+	background-color: rgba(197, 186, 186, 0.39);
+	position: absolute;
+	transform: translate3d(0px, 0px, -1200px); 
+	-webkit-transform: translate3d(0px, 0px, -1200px); 
+	-webkit-transform-origin-z: 0px;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	/*z-index: 2; */
+	transform-origin: center center;
+	padding: 20% 40%;
+}
+.about .image .more p {
+	text-align: center;
+}
+.about .image .more p a {
+	color: #000;
+	text-decoration: none;
+}
+.about .image .more p a:hover {
+	text-decoration: underline;
+}
+
+.classes h1, .packages .pack > h1 {
+
+	text-align: center;
+    font-family: 'Arapey','Sans';
+    text-transform: uppercase;
+    font-size: 2.7em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.classes span, .packages .pack>span  {
+	color: #168eea;
+    text-align: center;
+    display: block;
+    letter-spacing: 9px;
+    margin-bottom: 40px;
+}
+ .container {
+	margin: auto;
+	width: 80%;
+	overflow: hidden;
+}
+.classes .clas{
+
+	float: left;
+	width: 24%;
+	margin-right: 1%;
+	cursor: pointer;
+
+}
+.classes .outer {
+	position: relative;
+	overflow: hidden;
+
+
+}
+.classes .clas h4 {
+	font-family: 'Arapey';
+	font-size: 1.4em;
+    margin-top: 1em;
+    color: #111;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.classes .clas:hover .outer .inner{
+	top : 0%;
+}
+.classes .clas .inner {
+	position: absolute;
+	top: 100%;
+	background-color: #168eea;
+		text-align: center;
+	color: #FFF;
+	padding-top: 40%;
+	font-size:25px;
+	width: 100%;
+	height: 100%;
+}
+.packages {
+	background-image: url("../images/1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+	position: relative;
+
+}
+.packages .pack {
+	position: absolute;
+	width: 70%;
+	left: 16%;
+	top: 8%;
+}
+.packages h1 {
+	color: #fff;
+	font-size: 25px
+}
+.packages .lesson {
+	float: left;
+	color: #fff;
+	width: 22%;
+	margin-right: 2%;
+	background-color:rgba(255, 255, 255, 0.13);
+	padding: 0;
+}
+.packages .lesson p {
+	background-color: #00B6E3;
+	margin-top: 0;
+}
+
+.packages .lesson > span  {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	background-color: #049DC3;
+}
+.packages .lesson .top   {
+	background-color: #00B6E3;
+}
+.packages .lesson .top h3 {
+	margin-top: 0;
+	margin-bottom: 0px;
+	padding-top: 5px;
+	font-weight: 500;
+    text-align: center;
+    font-size: 50px;
+}
+.packages .lesson .top h3 span {
+	vertical-align: top;
+	font-size: 30px;
+
+}
+.packages .lesson .top h4 {
+	text-align: right;
+	font-weight: 500;
+	margin: 0px 7px;
+}
+
+.packages .lesson div ul li {
+	float: left;
+	display: inline-block;
+	padding: 0.5em 0em;
+    font-size: 0.9em;
+    color: #2b2b2b;
+}
+.packages .lesson div ul li  i {
+	color: #fff;
+}
+.packages .lesson div h6 {
+	text-align: center;
+
+}
+.packages .lesson div h6 i {
+	font-size: 40px;
+	text-align: center;
+}
+.lesson div button {
+	margin: auto;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    padding: 9px 25px;
+    margin-bottom: 25px;
+    background-color: #049DC3;
+}
+.signup {
+	position: fixed;
+	background-color: rgba(0, 0,0, 0.6);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.signup section h2 {
+	color: #168EEA;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-top: 20px
+}
+.signup section {
+	
+	margin: 50px auto;
+	background-color: #fff;
+	width: 35%;
+	padding-top: 35px; 
+	padding-bottom: 20px
+}
+.signup section form input[type="text"],.signup section form input[type="password"],.signup section form input[type="email"] {
+
+	display: block;
+	width: 90%;
+	margin: auto;
+	height: 40px;
+	margin-bottom: 20px;
+	border : 1px solid #ccc;
+	padding-left: 40%;
+}
+.signup section form p {
+	font-family: 'PTN57F';
+	padding-left: 157px;
+}
+.signup section form input[type="submit"] {
+
+background-color : #ee4f4f;
+border : 0;
+color: #FFF;
+width: 80%;
+margin-left: 10%;
+padding: 10px
+}
